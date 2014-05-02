@@ -1,0 +1,12 @@
+{
+  "name": "functional-react",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "jquery": "~2.1.1",
+    "backbone.marionette": "~1.8.4",
+    "nvd3": "~1.1.15-beta",
+    "requirejs": "~2.1.11",
+    "react": "~0.10.0"
+  }
+}

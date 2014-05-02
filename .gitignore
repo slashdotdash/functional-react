@@ -1,0 +1,6 @@
+node_modules/
+bower_components/
+css/vendor/
+js/vendor/
+
+*.jsx
