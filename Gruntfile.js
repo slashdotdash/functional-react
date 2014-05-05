@@ -41,6 +41,8 @@ module.exports = function(grunt) {
           { src: 'bower_components/backbone/backbone.js', dest: 'js/vendor/backbone.js' },
           { src: 'bower_components/backbone.marionette/lib/core/amd/backbone.marionette.js', dest: 'js/vendor/backbone.marionette.js' },
           { src: 'bower_components/backbone.wreqr/lib/backbone.wreqr.js', dest: 'js/vendor/backbone.wreqr.js' },
+          { src: 'bower_components/bacon/dist/Bacon.js', dest: 'js/vendor/bacon.js' },
+          { src: 'bower_components/bacon.model/dist/bacon.model.js', dest: 'js/vendor/bacon.model.js' },
           { src: 'bower_components/d3/d3.js', dest: 'js/vendor/d3.js' },
           { src: 'bower_components/jquery/dist/jquery.js', dest: 'js/vendor/jquery.js' },
           { src: 'bower_components/nvd3/nv.d3.js', dest: 'js/vendor/nv.d3.js' },
