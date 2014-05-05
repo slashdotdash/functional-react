@@ -10,26 +10,22 @@ define([
 
   return React.createClass({
     getInitialState: function() {
-      return { value: this.props.model.get() };
+      return { value: null };
     },
 
     componentDidMount: function() {
+      this.unsubscribe = this.props.stream.onValue(function(v) {
+        this.setState({ value: v });
+      }.bind(this));
     },
 
     componentWillUnmount: function() {
-    },
-
-    onChange: function(e) {
-      this.setState({ value: e.target.value }, this.notifyModel);
-    },
-
-    notifyModel: function() {
-      this.props.model.set(this.state.value);
+      return unsubscribe && unsubscribe();
     },
 
     render: function() {
       return (
-        React.DOM.input( {value:this.state.value, onChange:this.onChange} )
+        React.DOM.label( {style:{width: '5em', display: 'inline-block'}}, this.state.value,"%")
       );
     }
   });
