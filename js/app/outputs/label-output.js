@@ -3,9 +3,8 @@
  */
 
 define([
-  'underscore',
   'react'
-], function(_, React) {
+], function(React) {
   'use strict';
 
   return React.createClass({
@@ -20,12 +19,12 @@ define([
     },
 
     componentWillUnmount: function() {
-      return unsubscribe && unsubscribe();
+      return this.unsubscribe && this.unsubscribe();
     },
 
     render: function() {
       return (
-        React.DOM.label( {style:{width: '5em', display: 'inline-block'}}, this.state.value,"%")
+        React.DOM.label( {style:{width: '5em', display: 'inline-block'}}, this.state.value, '%')
       );
     }
   });

@@ -18,9 +18,9 @@ var serve404 = function(req, res) {
 
 var serveStaticFile = function(req, res) {
   var uri = url.parse(req.url).pathname,
-      filename = path.join(process.cwd(), uri);
-
-  var type = mime.lookup(filename);
+      filename = path.join(process.cwd(), uri),
+      type = mime.lookup(filename);
+            
   res.writeHead(200, { 'Content-Type': type });
 
   fs.exists(filename, function(exists) {

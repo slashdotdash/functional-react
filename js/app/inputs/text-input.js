@@ -3,9 +3,8 @@
  */
 
 define([
-  'underscore',
   'react'
-], function(_, React) {
+], function(React) {
   'use strict';
 
   return React.createClass({
@@ -29,7 +28,10 @@ define([
 
     render: function() {
       return (
-        React.DOM.input( {value:this.state.value, onChange:this.onChange} )
+        React.DOM.input({
+          value: this.state.value,
+          onChange: this.onChange
+        })
       );
     }
   });
